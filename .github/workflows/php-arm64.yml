@@ -1,4 +1,4 @@
-name: PHP Composer
+name: PHP Composer ARM
 
 on:
   push:
@@ -10,12 +10,10 @@ jobs:
   build:
 
     runs-on: ubuntu-latest
-    continue-on-error: ${{ matrix.experimental }}
     strategy:
       fail-fast: false
       matrix:
         extensions: ['ast, grpc', 'ast, grpc, protobuf']
-        experimental: [false]
 
     steps:
     - uses: actions/checkout@v2
