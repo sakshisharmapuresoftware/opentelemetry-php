@@ -38,7 +38,6 @@ jobs:
             composer validate && \
             apt install -y openssl php-common php-curl php-json php-mbstring php-mysql php-xml php-zip && \
             apt-get install -y php-ast php-grpc php-protobuf && \
-            apt-get install -y php-cs-fixer && \
             composer install --prefer-dist --no-progress --no-suggest && \
             composer update && \
             vendor/bin/php-cs-fixer fix --config=.php-cs-fixer.php --dry-run --stop-on-violation --using-cache=no -vvv && \
