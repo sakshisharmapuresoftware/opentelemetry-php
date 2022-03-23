@@ -36,7 +36,7 @@ jobs:
             source ~/.bashrc && \
             composer --version && \
             composer validate && \
-            apt install openssl php-common php-curl php-json php-mbstring php-mysql php-xml php-zip && \
+            apt install -y openssl php-common php-curl php-json php-mbstring php-mysql php-xml php-zip && \
             apt-get install -y php-ast php-grpc php-protobuf && \
             apt-get install -y php-cs-fixer && \
             composer install --prefer-dist --no-progress --no-suggest && \
